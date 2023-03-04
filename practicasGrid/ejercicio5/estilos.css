@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Fits';
+    src: url("C:/Users/arona/Downloads/Fits-Heavy.ttf");
+}
+
+body {
+    font-family: 'Fits', sans-serif;
+    font-weight: 400;
+    color: gray;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 9% 28% 30% 28%;
+    grid-template-rows: 150px 450px 350px 100px;
+    grid-template-areas: 
+    "header header header header"
+    "menu main main article1"
+    ". article2 article3 article4"
+    "pie pie pie pie";
+    gap:20px;
+}
+
+.head {
+    color: gray;
+    text-align: center;
+    grid-area: header;
+    border-bottom: 2px black solid;
+}
+
+.menu {
+    grid-area: menu;
+    justify-content: left;
+    padding-top: 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.principal {
+    grid-area: main;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.principal img {
+    width: 80%;
+    height: 60%;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.principal p {
+    padding: 20px;
+}
+
+.article1 {
+    border: 1px solid black;
+    border-radius: 15px;
+    grid-area: article1;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.article1 img{
+    width: 80%;
+    height: 50%;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.article1 p {
+    padding: 20px;
+    font-size:x-large;
+    font-weight: 200;
+} 
+
+.article2 {
+    border: 1px solid black;
+    border-radius: 15px;
+    grid-area: article2;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.article2 img {
+    width: 80%;
+    height: 50%;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.article2 p {
+    padding: 20px;
+    font-size:x-large;
+} 
+
+.article3 {
+    border: 1px solid black;
+    border-radius: 15px;
+    grid-area: article3;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.article3 img {
+    width: 80%;
+    height: 50%;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.article3 p {
+    padding: 20px;
+    font-size:x-large;
+} 
+
+.article4 {
+    border: 1px solid black;
+    border-radius: 15px;
+    grid-area: article4;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.article4 img {
+    width: 80%;
+    height: 50%;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.article4 p {
+    padding: 20px;
+    font-size:x-large;
+} 
+
+.pie {
+    grid-area: pie;
+    border-top: 2px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.izqda {
+    padding-top: 20px;
+}
+
+.centro {
+    padding-top: 20px;
+}

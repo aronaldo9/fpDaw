@@ -1,0 +1,53 @@
+body{
+    background-color: blanchedalmond;    
+}
+
+h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.caja{
+    background-color: whitesmoke;
+    width: 200px; 
+    height: 200px;
+    margin: auto;
+    margin-top: 250px;
+    color: black;
+    padding: 10px;
+    animation-name: animacion1;
+    animation-duration: 20s;
+    animation-play-state: running;
+}
+
+
+@keyframes animacion1{
+    0%{
+        color: red;
+    }
+    20%{
+        color: blue;
+    }
+    40%{
+        color:green;
+    }
+    60%{
+        color: fuchsia;
+    }
+    80%{
+        color: crimson;
+    }
+    100%{
+        color: orange;
+    }
+}
+
+.botonVolver{
+    background-color: chocolate;
+    color: white;
+    bottom: 100px;
+    margin-left: 45%;
+    position: fixed;
+    text-decoration: none;
+    padding: 10px;
+}

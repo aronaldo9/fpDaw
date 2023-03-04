@@ -1,0 +1,33 @@
+body{
+    background-color: blanchedalmond;    
+}
+
+h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.cajaTexto{
+    background-color: chocolate;
+    width: auto;
+    padding: 10px;
+    column-width: 100px;
+    column-gap: 20px;
+    border-radius: 20px;
+    text-indent: 1em;
+    margin: 0;
+    text-align: justify;
+}
+h3{
+    color: blanchedalmond;
+}
+
+.botonVolver{
+    background-color: chocolate;
+    color: white;
+    bottom: 100px;
+    margin-left: 45%;
+    position: fixed;
+    text-decoration: none;
+    padding: 10px;
+}

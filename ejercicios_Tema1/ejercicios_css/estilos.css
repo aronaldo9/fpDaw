@@ -1,0 +1,78 @@
+h1{
+    text-align: center;
+}
+
+.datos {
+    background-color: rgb(219, 219, 219);
+}
+legend {
+    background-color: white;
+    border: black 1px solid;
+}
+.forma {
+    background-color:navajowhite;
+}
+
+#caja {
+    width: 50%;
+}
+#columna1 {
+    width: 33%;
+    float: left;
+}
+#columna1 input{
+    width: 93%;
+    margin-right: 1px;
+}
+
+#columna2 {
+    width: 33%;
+    float: left;
+}
+#columna2 input{
+    width: 93%;
+}
+
+#columa3 input{
+    width: 93%;
+}
+
+#columna4 {
+    width: 33%;
+    float: left;
+}
+#columna4 input{
+    width: 70%;
+}
+
+#columna5 {
+    width: 33%;
+    float: left;
+}
+#columna5 select{
+    width: 75%;
+}
+
+#columna7 {
+    width: 66%;
+    float: left;
+}
+#columna7 input {
+    width: 75%;
+}
+
+label{
+    display: block;
+}
+
+
+#caja2 {
+    padding: 40px;
+}
+ul{
+    list-style: none;
+}
+
+.documentos {
+    background-color:lightcoral
+}

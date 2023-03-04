@@ -1,0 +1,85 @@
+body {
+    text-align: center;
+    background-color:whitesmoke;
+}
+
+h1{
+    color: steelblue;
+    text-align: center;
+}
+
+.contenedor {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 20% 45% 15% 15%;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+#img1 {
+    background-color: chartreuse;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#img2 {
+    background-color: red;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#img3 {
+    background-color: aqua;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#img4 {
+    background-color: black;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#img5 {
+    background-color: brown;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#img6 {
+    background-color: violet;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#img7 {
+    background-color: cadetblue;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#img8 {
+    background-color: darkgoldenrod;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-radius: 1;
+}
+

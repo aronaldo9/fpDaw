@@ -1,0 +1,42 @@
+body{
+    background-color: blanchedalmond;    
+}
+
+h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.caja{
+    background-color: whitesmoke;
+    width: 200px; 
+    height: 200px;
+    margin: auto;
+    margin-top: 250px;
+    color: red;
+    padding: 10px;
+    animation-name: animacion1;
+    animation-duration: 10s;
+    animation-iteration-count: 3;
+}
+
+@keyframes animacion1{
+    from{
+        margin-top: 250px;
+        color: red;
+    }
+    to{
+        margin-top:50px;
+        color:blue;
+    }
+}
+
+.botonVolver{
+    background-color: chocolate;
+    color: white;
+    bottom: 100px;
+    margin-left: 45%;
+    position: fixed;
+    text-decoration: none;
+    padding: 10px;
+}

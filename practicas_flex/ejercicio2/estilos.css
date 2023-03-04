@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    background-color:whitesmoke;
+}
+
+h1{
+    color: steelblue;
+    text-align: center;
+}
+
+.contenedor {
+    width: 80%;
+    height: 250px;
+    margin: auto;
+    background-color: rgb(250, 218, 165);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+.caja1, .caja2, .caja3 {    
+    background-color: aquamarine;
+    border: 1px black solid;
+    width: 25%;
+    height: 80px;
+}
+
+.caja1, .caja3 {
+    align-self: flex-end;
+    margin-bottom: 20px;
+}

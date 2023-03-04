@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    background-color:whitesmoke;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: red;
+}
+a:hover{
+    color: green;
+}
+
+h1 {
+    color: steelblue;
+    text-align: center;
+}

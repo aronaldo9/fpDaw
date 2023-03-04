@@ -1,0 +1,28 @@
+body{
+    background-color: blanchedalmond;    
+}
+
+h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.caja{
+    background-image: url(/imagenes/huellas.png), url(/imagenes/arbol.jpg); background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    transform: rotate(50deg);
+    margin-top: 200px;
+    color: rgba(0, 0, 255, 0.3);
+}
+
+.botonVolver{
+    background-color: chocolate;
+    color: white;
+    bottom: 100px;
+    margin-left: 45%;
+    position: fixed;
+    text-decoration: none;
+    padding: 10px;
+}

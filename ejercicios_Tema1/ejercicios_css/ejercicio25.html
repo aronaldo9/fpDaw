@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 25</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <h1>HOJA DE INSCRIPCIÓN <br> EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+    <form>
+        <fieldset class="datos">
+            <legend>Datos Personales</legend>
+
+            <div id="caja">
+                <div id="columna1">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div id="columna2">
+                    <div>
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div id="columna3">
+                    <div>
+                        <label for="DNI" id="linea1">DNI</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div id="columna4">
+                    <div>
+                        <label for="localidad">Localidad Nacimiento</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div id="columna5">
+                    <div>
+                        <label for="provincia">Provincia:</label>
+                        <select id="provincia" name="provincia">
+                            <option value="selecciona">- selecciona -</option>
+                            <option value="Almería">Almería</option>
+                            <option value="Cádiz">Cádiz</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Huelva">Huelva</option>
+                            <option value="Jaén">Jaén</option>
+                            <option value="Málaga">Málaga</option>
+                            <option value="Sevilla">Sevilla</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="columna6">
+                    <div>
+                        <label for="fecha_nacimiento">Fecha Nacimiento:</label>
+                        <input type="text" placeholder="dd/mm/aaaa">
+                    </div>
+                </div>
+                <div id="columna7">
+                    <div>
+                        <label for="direccion">Dirección:</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div id="columna8">
+                    <div>
+                        <label for="cp">Código Postal:</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="forma">
+            <legend>Forma de Acceso</legend>
+            <ul>
+                <li><input name="forma" type="radio" value="direct">Direct
+                    <ul>
+                        <li><input name="direct" type="radio" value="1">Bachillerato LOGSE. Modalidad <input name="modalidad" type="text"></li>
+                        <li><input name="direct" type="radio" value="2">Bachillerato Experimental</li>
+                        <li><input name="direct" type="radio" value="3">COU. Opción <input name="opcion" type="text"></li>
+                        <li><input name="direct" type="radio" value="4">FP2</li>
+                        <li><input name="direct" type="radio" value="5">Otros (especifique) <input name="especificar" type="text"></li>
+                    </ul>
+                    
+                </li>
+                <li><input name="forma" type="radio" value="prueba libre">Prueba Libre</li>
+            </ul>
+        </fieldset>
+
+        <fieldset class="documentos">
+            <legend>Documentos Adjuntados</legend>
+            <div style="width: 17%; float:left">
+                <input name="documentos" type="checkbox">Fotocopia DNI 
+            </div>             
+            <input name="documentos" type="checkbox">Certificado Académico
+            <br>
+            <input name="documentos" type="checkbox">Otros documentos (especifique) <input name"especificar" type="text" style="width: 23%;">
+        </fieldset>
+        <button type="submit" style="margin-top: 15px;">Enviar Solicitud</button>
+    </form>
+</body>
+
+</html>

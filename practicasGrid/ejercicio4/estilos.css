@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    background-color:whitesmoke;
+}
+
+h1{
+    color: steelblue;
+    text-align: center;
+}
+
+.contenedor{
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "cab cab cab cab cab"
+    "cab cab cab cab cab"
+    "men main main main aside"
+    "men main main main aside"
+    "men main main main aside"
+    "pie pie pie pie pie";
+}
+
+#cab {
+    background-color: blueviolet;
+    grid-area: cab;
+}
+
+#menu {
+    background-color: deepskyblue;
+    grid-area: men;
+}
+
+#main {
+    background-color: darkmagenta;
+    grid-area: main;
+}
+
+#aside {
+    background-color: mediumvioletred;
+    grid-area: aside;
+}
+
+#pie {
+    background-color: blueviolet;
+    grid-area: pie;
+}

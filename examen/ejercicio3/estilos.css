@@ -1,0 +1,16 @@
+.caja{
+    background-color: rgb(177, 176, 176);
+    color: black;
+    padding: 10px;
+    margin: auto;
+    width: 60%;
+}
+
+img{
+    float: left;
+    padding: 10px;
+}
+
+p{
+    padding: 5px;
+}

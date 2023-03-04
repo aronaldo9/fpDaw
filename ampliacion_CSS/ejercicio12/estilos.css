@@ -1,0 +1,27 @@
+body{
+    background-color: blanchedalmond;    
+}
+
+h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.caja{
+    background-color: chocolate;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    border-radius: 20px;
+    transform: rotate(-45deg) scale(50%,50%);
+}
+
+.botonVolver{
+    background-color: chocolate;
+    color: white;
+    bottom: 100px;
+    margin-left: 45%;
+    position: fixed;
+    text-decoration: none;
+    padding: 10px;
+}

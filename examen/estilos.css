@@ -1,0 +1,18 @@
+.lista{
+    background-image: url("Imagenes/descarga.jfif");
+    background-repeat: no-repeat;
+    margin: auto;
+    background-position: center;
+    width: 15%;
+
+}
+
+.lista a{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+a:hover{
+    background-color: gray;
+}

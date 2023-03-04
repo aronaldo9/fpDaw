@@ -1,0 +1,45 @@
+body{
+    background-color: blanchedalmond;    
+}
+
+h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.caja{
+    background-color: whitesmoke;
+    width: 200px; 
+    height: 200px;
+    margin-top: 250px;
+    left: 30px;
+    position: relative;
+    color: black;
+    padding: 10px;
+    animation-name: animacion1;
+    animation-duration: 4s;
+    animation-play-state: paused;
+}
+
+.caja:hover {
+    animation-play-state: running;
+}
+
+@keyframes animacion1{
+    from{
+       left: 30px; 
+    }
+    to{
+        left: 130px;
+    }
+}
+
+.botonVolver{
+    background-color: chocolate;
+    color: white;
+    bottom: 100px;
+    margin-left: 45%;
+    position: fixed;
+    text-decoration: none;
+    padding: 10px;
+}

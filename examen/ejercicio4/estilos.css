@@ -1,0 +1,44 @@
+body{
+    background-color: blue;
+    color: white;
+    width: 20%;
+    margin: auto;
+}
+h1{
+    width: auto;
+    text-align: center;
+}
+
+.caja{
+    background-color: rgb(82, 82, 248);
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input{
+    display: block;
+    margin: auto;
+    padding: 5px;
+    margin-top: 5px;
+    width: 80%;    
+}
+
+button{
+    text-align: center;
+    background-color: lightblue;
+    border-style: none;
+    color: black;
+    margin: auto;
+    padding: 5px;
+    margin-top: 5px;
+    width: 80%;
+}
+
+p{
+    margin-top: 10px;
+    text-align: center;
+}

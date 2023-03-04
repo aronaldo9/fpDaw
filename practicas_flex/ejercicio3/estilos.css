@@ -1,0 +1,73 @@
+body {
+    text-align: center;
+    background-color:whitesmoke;
+}
+
+h1 {
+    color: steelblue;
+    text-align: center;
+}
+
+.contenedor1 {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+.caja1, .caja2, .caja3 {
+    background-color: aquamarine;
+    border: 1px black solid;
+    width: 15%;
+    height: 80px;
+}
+
+p {
+    color: black;
+    text-align: start;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+
+.caja4 {
+    width: 15%;
+    height: 80px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+}
+
+.contenedor2 {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.caja5 {
+    background-color: peru;
+    border: 1px black solid;
+    width: 30%;
+    height: 30px;
+    text-align: start;
+    padding-left: 5px;
+    padding-top: 2px;
+}
+
+

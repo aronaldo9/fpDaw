@@ -1,0 +1,75 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color:whitesmoke;
+}
+
+h1{
+    color: steelblue;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,15vh);
+    grid-template-areas: 
+    "head"
+    "articulo1"
+    "articulo2"
+    "articulo3"
+    "pie";
+}
+
+#head {
+    background-color: red;
+    grid-area: head;
+}
+
+.articulo1 {
+    background-color: green;
+    grid-area: articulo1;
+}
+
+.articulo2 {
+    background-color: yellow;
+    grid-area: articulo2;
+}
+
+.articulo3 {
+    background-color: blue;
+    grid-area: articulo3;
+}
+
+#pie {
+    background-color: orange;
+    grid-area: pie;
+}
+
+@media screen and (min-width:768px) {
+    .contenedor {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 15vh 30vh 30vh 15vh;
+        grid-template-areas: 
+        "head head"
+        "articulo1 articulo2"
+        "articulo3 articulo3"
+        "pie pie";
+    }
+}
+
+@media screen and (min-width:992px) {
+    .contenedor {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,30vh);
+        grid-template-areas: 
+        "head head head"
+        "articulo1 articulo2 articulo3"
+        "pie pie pie";
+    }
+}

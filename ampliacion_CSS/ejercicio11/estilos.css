@@ -1,0 +1,39 @@
+body{
+    background-color: blanchedalmond;    
+}
+
+h1{
+    text-align: center;
+    color: chocolate;
+}
+
+.caja1{
+    background-color: chocolate;
+    width: 300px;
+    height: 300px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    transform: translate(50px,0);
+
+}
+.caja2{
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    transform: translate(0,40px);
+}
+
+.botonVolver{
+    background-color: chocolate;
+    color: white;
+    bottom: 100px;
+    margin-left: 45%;
+    position: fixed;
+    text-decoration: none;
+    padding: 10px;
+}

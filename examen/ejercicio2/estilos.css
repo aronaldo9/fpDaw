@@ -1,0 +1,15 @@
+nav{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+.caja{
+    display: inline-block;
+    margin-right: 40px;
+}
+.caja:hover{
+    text-decoration: underline;
+    color: lightgreen;
+}

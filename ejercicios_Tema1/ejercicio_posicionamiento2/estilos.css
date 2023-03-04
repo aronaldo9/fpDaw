@@ -1,0 +1,137 @@
+body{
+    background-color: rgb(204, 204, 204);
+}
+#caja_izqda {
+    width: 5%;
+    height: auto;
+    border: 2px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    left: 5px;
+    top:150px;
+    padding: 3px;
+    
+}
+
+#caja_izqda img{
+    width: 100%;
+    height: 20%;
+}
+
+#caja_dcha {
+    background-color: rgba(103, 240, 121, 0.991);
+    position: relative;
+    top: 50px;
+    left: 10%;
+    width: 80%;
+}
+
+#caja_verde {
+    height: 400px;
+    margin: 0;
+}
+
+#foto1 {
+    position: relative;
+    left: 200px;
+    top: 100px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    transform: rotate(-45deg);
+    z-index: 4;
+}
+#foto2 {
+    position: relative;
+    left: 300px;
+    top: -50px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    transform: rotate(45deg);
+    z-index: 3; 
+}
+#foto3 {
+    position: relative;
+    left: 390px;
+    top: -200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    transform: rotate(-20deg);
+    z-index: 2;
+}
+#foto4 {
+    position: relative;
+    left: 500px;
+    top: -350px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    transform: rotate(20deg);
+    z-index: 1;
+}
+
+.navbar1 {
+    background-color: gray;
+    color: white;
+    width: 100%;
+    margin: 0%;
+}
+
+.navbar1 a{
+    color: white;
+    display: inline-block;
+    margin-right: 140px;
+    text-decoration: none;
+    padding: 15px;
+}
+.navbar1 a:visited{
+    text-decoration: none;
+}
+.navbar1 a:hover{
+    color: rgb(123, 230, 161);
+}
+
+.navbar2 {
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 120px;
+}
+.navbar2 a{
+    text-decoration: none;
+    text-align: center;
+    color: black;    
+    font-size:x-small;
+    display: block;
+    margin-top: 2px;
+}
+.navbar2 a:visited{
+    text-decoration: none;
+}
