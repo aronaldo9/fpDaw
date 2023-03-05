@@ -10,6 +10,8 @@
 
 body {
     font-family:'Righteous', sans-serif;
+    color:rgb(21, 183, 21);
+    font-weight: 400;
 }
 
 
@@ -37,8 +39,22 @@ h1 {
 
 }
 
+h2 {
+    color: rgb(21, 183, 21);
+}
+
 ul {
     list-style: none;
     color: rgb(21, 183, 21);
     font-weight: bold;
+}
+
+.articulo1 {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+}
+
+.pie p {
+    color: black;
 }
