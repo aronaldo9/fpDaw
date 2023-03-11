@@ -70,6 +70,10 @@ img {
     width: 25%;
 }
 
+.imagen9 {
+    display: none;
+}
+
 .pie p {
     color: black;
     padding: 10px;
@@ -83,6 +87,8 @@ h3 {
 h4 {
     padding-left: 10px;
 }
+
+
 
 @media screen and (min-width:768px) {
     .contenedor {
@@ -105,12 +111,18 @@ h4 {
     nav li {
         display: inline-block;
         padding-top: 20px;
+        padding-left: 10px;
     }
 
     img {
         width: 50%;
         height: 25%;
     }
+
+    .imagen9 {
+        display: none;
+    }
+    
     .pie {
         grid-area: pie;
         display: flex;
@@ -122,3 +134,33 @@ h4 {
     }
 
 }
+
+
+@media screen and (min-width: 992px) {
+    .contenedor {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 12vh 100vh 10vh;
+        grid-template-areas: 
+        "head head head head"
+        "article2 article2 article1 article1"
+        "pie pie pie pie";
+    }
+
+    .head {
+        grid-area: head;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    .imagen9 {
+        display: block;
+    }
+
+    img {
+        width: 33%;
+    }
+}
+    
+
