@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(226, 225, 225);    
+}
+
+.contenedor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh auto 20vh 20vh 10vh;
+    grid-template-areas: 
+    "head"
+    "principal"
+    "sidebar"
+    "articulo"
+    "pie";
+    gap: 15px;
+}
+
+.head {
+    grid-area: head;
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.principal {
+    grid-area: principal;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.principal p {
+    padding-bottom: 5px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: orange;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.articulo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;   
+}
+
+.ventana1 {
+    background-color: deepskyblue;
+    color: white;
+    width: 65%;
+    min-height: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ventana2 {
+    background-color: deepskyblue;
+    color: white;
+    width: 35%;
+    min-height: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie {
+    grid-area: pie;
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 992px){
+    .contenedor {
+        grid-template-columns: auto 30%;
+        grid-template-rows: 10vh 60vh 20vh 10vh;
+    }
+
+    .head {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .main {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .sidebar {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .articulo {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .ventana1 {
+        width: 50%;
+    }
+    .ventana2 {
+        width: 50%;
+    }
+
+
+    .pie {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 1 DOM JS</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">Esto es un párrafo</p>
+        <p id="p2">Esto es otro párrafo</p>
+    </div>
+
+    <div id="div2">
+        <h1 id="h1">Probando con encabezamientos</h1>
+        <h2 id="h2">¡¡Hola mundo!!</h2>
+    </div>
+
+    <script>
+        const para = document.createElement("p");
+        const node = document.createTextNode("Esto es nuevo.");
+        para.appendChild(node);
+
+        const element = document.getElementById("div1");
+        element.appendChild(para);
+    </script>
+
+    <script>
+        const para1 = document.createElement("p");
+        const node1 = document.createTextNode("Esto es nuevo.");
+        para1.appendChild(node1);
+
+        const element1 = document.getElementById("div1");
+        const child = document.getElementById("p1");
+        element1.insertBefore(para1,child);
+    </script>
+
+    <script>
+        const encabezamiento = document.createElement("h1");
+        const hola = document.createTextNode("Esto es un h2");
+        encabezamiento.appendChild(hola);
+
+        const element2 = document.getElementById("h1");
+        element2.appendChild(encabezamiento);
+        const elmnt = document.getElementById("p1"); elmnt.remove();
+    </script>
+</body>
+</html>

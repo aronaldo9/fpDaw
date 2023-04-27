@@ -17,7 +17,7 @@ h1{
 .contenedor {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5,15vh);
+    grid-template-rows: repeat(5,200px);
     grid-template-areas: 
     "head"
     "articulo1"
