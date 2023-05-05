@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1 DOM</title>
+</head>
+<body>
+    <article id="articulo">
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veniam sapiente eaque voluptate explicabo, maiores quas aspernatur ea? Impedit sunt possimus esse vel cum veniam mollitia adipisci ipsum in nesciunt.</p>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellendus amet doloribus beatae cum veritatis quidem autem dolores delectus aliquam? Quos molestiae nihil perspiciatis autem sint provident illum animi temporibus?</p>
+        <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ab nulla delectus dolor corporis maiores. Et nostrum iusto, dolore repellat maxime totam natus deserunt quam? Est tempora architecto ipsum iusto.</p>
+    </article>
+    <section id="seccion">
+        <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sed nisi officiis tenetur! Molestiae ut vitae exercitationem deserunt perferendis neque in temporibus inventore laborum nisi harum, asperiores soluta maxime recusandae!</p>
+        <p id="p5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aperiam ipsa provident fugiat facere qui corrupti itaque, laboriosam architecto totam autem unde quis aliquam laudantium minima veritatis repellat? Enim, amet.</p>
+        <p id="p6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ex ipsum tempore dolor, exercitationem rem voluptas atque repellendus, quas ducimus ullam nihil necessitatibus voluptatibus fugiat maxime. Deserunt ducimus laborum consequatur. </p>
+    </section>
+
+    <!-- Añade un párrafo más a la caja article. -->
+    <script>
+        var nuevoP = document.createElement("p");
+        var contenido = document.createTextNode("Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui repellendus culpa recusandae? Deserunt nam amet unde placeat, est tenetur nihil adipisci corrupti non fuga voluptatibus dicta explicabo aut. Hic, temporibus.");
+        nuevoP.appendChild(contenido);
+        var element = document.getElementById("articulo");
+        element.appendChild(nuevoP);
+    </script>
+
+    <!-- Elimina el elemento dos de section. -->
+    <script>
+        var element = document.getElementById("p5");
+        element.remove();
+    </script>
+
+    <!-- Cambia el contenido del primer párrafo de article. -->
+   <script>
+        document.getElementById("p1").innerHTML = "<p>El contenido de este párrafo ha sido cambiado</p>"
+    </script>
+
+    <!-- Modifica el color del texto de article. -->
+    <script>
+        document.getElementById("articulo").style.color = "red";
+    </script>
+
+    <!-- Añade un background a section. -->
+    <script>
+        document.getElementById("seccion").style.backgroundColor = "lightblue";
+    </script>
+
+    <!-- Añade un borde a article. -->
+    <script>
+        document.getElementById("articulo").style.border = "1px solid black";
+    </script>
+</body>
+</html>
