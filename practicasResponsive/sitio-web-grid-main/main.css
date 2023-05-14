@@ -14,7 +14,7 @@ section {
 }
 
 #menu {
-  background-color: rgb(195, 35, 88);
+  background-color: rgb(3, 60, 57);
   display: grid;
   grid-template-columns: repeat(4, 200px);
   grid-template-rows: 200px 200px 400px;
@@ -131,9 +131,10 @@ section {
 #about {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 20px;
   padding: 20px;
+  background-color: rgb(147, 202, 178);
 }
 
 #about .tile {
@@ -145,11 +146,16 @@ section {
 #about .tile-1 {
   background-color: #eee;
   grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
+#about .tile-1 img {
+  border-radius: 5%;
+}
+
 #about .tile-2 {
   background-color: #eee;
   grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  grid-row: 1 / 2;
 }
 #about .tile-2 img {
   width: 100%;
@@ -163,18 +169,10 @@ section {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
 }
-
-#about .tile-4 {
-  background-color: #eee;
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+#about .tile-3 img {
+  border-radius: 5%;
 }
 
-#about .tile-5 {
-  background-color: #eee;
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
 
 #about .tile {
   display: grid;
@@ -189,7 +187,7 @@ section {
 ************************************/
 
 #projects {
-  background-color: black;
+  background-color: rgb(3, 60, 57);
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -364,7 +362,7 @@ section {
 ************************************/
 #posts {
   padding: 10px;
-  background-color: rgb(66, 186, 255);
+  background-color: rgb(3, 60, 57);
   display: grid;
   grid-template: repeat(2, 300px) / repeat(3, 350px);
   gap: 10px;
@@ -398,22 +396,22 @@ section {
 }
 
 #posts .post.post-1 {
-  background-image: url(img/work-15.png);
+  background-image: url(img/13.jpg);
 }
 #posts .post.post-2 {
-  background-image: url(img/work-02.png);
+  background-image: url(img/2.jpg);
 }
 #posts .post.post-3 {
-  background-image: url(img/work-05.png);
+  background-image: url(img/25.jpg);
 }
 #posts .post.post-4 {
-  background-image: url(img/work-08.png);
+  background-image: url(img/27.jpg);
 }
 #posts .post.post-5 {
-  background-image: url(img/work-10.png);
+  background-image: url(img/28.jpg);
 }
 #posts .post.post-6 {
-  background-image: url(img/work-15.png);
+  background-image: url(img/4.jpg);
 }
 
 /************************************
@@ -421,7 +419,7 @@ section {
 ************************************/
 
 #contact {
-  background-color: rgb(26, 72, 151);
+  background-color: rgb(147, 202, 178);
   display: grid;
   grid-template: auto 100px / 700px;
   justify-content: center;
@@ -454,9 +452,10 @@ section {
 }
 
 #contact form input[type="submit"] {
-  background-color: #67ca50;
+  background-color: rgb(3, 60, 57);
   font-weight: bold;
   font-size: 28px;
+  color: white;
 }
 
 #contact .social-networks a {
@@ -485,13 +484,14 @@ section {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
     padding: 20px;
-    box-sizing: border-box;    
+    box-sizing: border-box;   
   }
 
   #about .tile-1 {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
   }
+  
   #about .tile-2 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;   

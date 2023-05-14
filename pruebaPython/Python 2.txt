@@ -1,0 +1,310 @@
+MANEJO BÁSICO DE LISTAS, TUPLAS Y DICCIONARIOS
+
+	nombres = ["Carlos","Arturo","Belen","Javier","Ambrosio"]
+
+    • Una vez que tenemos rellenada una lista, podremos:
+    	• consultar su tamaño con len()	--> en realidad len sirve para obtener el tamaño de cualquier cosa
+
+		print(len(nombres))    	
+	
+	• acceder a un elemento indicando su posición entre corchetes. Como siempre, la lista comienza en 0
+	
+		print(nombres[1]) # muestra "Arturo" (2º elemento de la lista)
+		
+	• sustituir un elemento por otro mediante una asignación en la posición que vamos a cambiar:
+	
+		nombres[0]="Antonio"	# Cambia "Carlos" por "Antonio" (1º elemento de la lista)
+	
+	• podemos recuperar elementos por el final indicando posiciones negativas. El -1 es el último elemento de la lista
+	
+		print(nombres[-2]) # muestra "Javier" (2º elemento empezando por el final)
+
+	• SLICE: podemos extraer una sublista indicando las posiciones iniciales y finales que queremos extraer
+	
+		println(nombres[1:4]) # Arturo,Belen,Javier   # recupera los nombres entre las posiciones [1,4)  -el 4 no entra-
+		println(nombres[0:4:2]) # Carlos,Belen   # recupera los nombres entre las posiciones [0,4)  de 2 en 2
+
+	• DESESTRUCTURACIÓN: Consiste en sacar en variables los datos de la lista
+		
+		a,b,c,d = nombres
+		print(a)	# Carlos
+		print(b)	# Arturo
+		
+	• Para añadir un dato a la lista: 
+	
+		nombres.append("Ismael")	# Añade Ismael al final de la lista
+	
+	• Para borrar un dato, hay dos formas:
+		
+		nombres.remove("Ismael")	# Borra Ismael
+		del nombres[0]			# Borra Carlos (1º elemento de la lista)
+	
+	• Para añadir una lista a otra:
+	
+		nombres + ["Pablo","Pedro"] # Añade Pablo y Pedro al final de la lista
+		
+	• Las tuplas y los set tienen métodos parecidos 
+		- por ejemplo, las tuplas son inmutables y no tienen los métodos de añadir/borrar pero si los de consultar
+		- los set son como las listas pero no se respeta el orden y se pueden sacar datos
+
+
+
+	prefijos = {"granada":958, "jaen":953, "madrid":91}
+
+    • Una vez que tenemos rellenado un diccionario, podremos:
+    	• consultar su tamaño con len()	
+
+		print(len(prefijos)) # sale 3
+    	
+    	• consultar el valor de una clave escribéndola entre corchetes
+    	
+    		print(prefijos["granada"]) # sale 958
+
+	• añadir una nueva clave o cambiar el valor previo usando asignación:
+	
+		prefijos["granada"] = 999 	# cambia el prefijo asociado a granada
+		prefijos["movil"] = 659		# añade al map el prefijo "movil" asociado a 659
+		
+	• borrar una clave usando del diccionario
+
+		del prefijos["movil"]	# borra el par ("movil",659) del diccioanrio
+
+EL IF EN PYTHON
+
+    • En PY existe el mismo concepto de if que en otros lenguajes, pero con una diferencia única: 
+      las tabulaciones definen el contenido de los bloques if y else
+        ◦ PEP8 considera como tabulación una secuencia de 4 espacios seguidos. 
+        ◦ Aunque también se puede usar el tabulador, existen problemas si en un archivo usamos unas veces espacios y otras el tabulador 
+        ◦ Si usamos editores de texto, lo suyo es configurar la tabulación para que nos deje 4 espacios y así ser fieles al PEP 8
+        
+    • Ejemplo:
+
+	texto_edad = input("Dime tu edad: ")
+        if texto_edad.isdecimal():    	# El método isdecimal() comprueba si el string texto_edad guarda un número
+            # Ya estoy dentro del if. Atención a la tabulación
+            # Convierto texto_edad en un número entero
+            edad = int(texto_edad)
+            if edad >=18:
+            	# Estoy dentro de un segundo if. Atención a la nueva tabulación
+            	print("Eres mayor de edad")	
+    	    else:    	    	
+    	    	print("Eres menor de edad") 
+
+	print("Programa finalizado") # Este print está fuera del if, y por eso no lleva tabulaciones
+          
+    • También podemos escribir una estructura con condiciones múltiples si usamos elif
+
+	texto_edad = input("Dime tu edad: ")
+        if texto_edad.isdecimal(): 
+            # Ya estoy dentro del if. Atención a la tabulación
+            # Convierto texto_edad en un número entero
+            edad = int(texto_edad)
+            if edad < 0:
+            	print("La edad no puede ser negativa")
+            elif edad >=18:
+            	print("Eres mayor de edad")	
+    	    else:    	    	
+    	    	print("Eres menor de edad") 
+	print("Programa finalizado") 
+
+
+    • Por último, tenemos la asignación condicional, que en PY se hace así:
+
+	<variable> = <valor> if <condición> else <valor alternativo>
+
+	Ejemplo: en el ejemplo de antes sustituyo el if más interior por una asignación condicional
+	
+	texto_edad = input("Dime tu edad: ")
+        if texto_edad.isdecimal(): 
+            edad = int(texto_edad)
+            mensaje = "eres mayor de edad" if edad>=18 else "eres menor de edad"
+	print("Programa finalizado") 
+	
+EL BUCLE WHILE
+
+    • Es muy similar a los demás lenguajes, pero usando tabulaciones para encerrar 
+      el contenido de lo que se repite
+
+	Ejemplo: pedimos la edad al usuario y nos dice si es mayor/menor de edad, hasta que escriba SALIR/salir
+
+	repetir = True
+
+	while repetir:
+	    # Estoy dentro del while y por eso su contenido lleva una tabulación más
+	    texto_edad = input("Dime tu edad: ")
+	    # En PY el == hace lo mismo que el equals de Java
+	    if texto_edad == "SALIR" or texto_edad == "salir":
+	        repetir = False       
+    	    else:
+		#Detecto si texto_edad guarda un número
+		if texto_edad.isdecimal():
+		    # paso a número el texto
+		    edad = int(texto_edad)
+		    # compruebo si edad es mayor de 18
+		    if edad >= 18:
+		        print("Eres mayor de edad")
+		    else:
+		        print("Eres menor de edad")
+		else:
+		    print("No has introducido un número")
+
+	print("Programa finalizado")
+
+	    ◦ Nota: La condición if texto_edad == "SALIR" or texto_edad == "salir":
+	      se puede escribir también así (forma recomendada en PY):
+
+		    # Compruebo si texto_edad está contenido en una tupla
+		    if texto_edad in ("salir","SALIR"):
+
+	• Como novedad, no existe el bucle do-while
+
+EL BUCLE FOR
+
+    • En PY el bucle for es siempre un “for mejorado”, o sea,
+      necesitamos un objeto del que extraer los datos 
+      (en terminología de Python, este tipo de objetos se llaman ITERABLES)
+    • Por tanto:
+        ◦ el objetivo del for es recorrer un objeto iterable
+        ◦ lo que hace es repetir el bloque de líneas, cada vez con un objeto diferente
+          extraído del iterable recorrido
+
+    • Veamos ejemplos de objetos iterables que pueden ser recorridos con un for mejorado:
+        ◦ Un range es una secuencia de números enteros. Hay tres tipos:
+          - range(A) es la secuencia de números de 0 hasta A-1
+          - range(A,B) es la secuencia de números de A hasta B-1
+	  - range(A,B,N) comienza en A, termina en B-1 y se avanza de un número al siguiente de N en N. 
+
+	  Ejemplos:
+
+		for i in range(10):    
+			print(i) 	# muestra los números de 0 a 9
+
+		for i in range(10,100,5):	# muestra los números de 10 a 95 de 5 en 5
+			print(i)
+
+            ▪ El range es un ejemplo de un GENERATOR, que es un tipo de iterable que 
+              proporciona sus elementos de forma lazy, es decir, se obtiene el siguiente número
+              cuando es necesario y no están todos los números almacenados en la memoria.
+              
+        ◦ Un string es un iterable de sus letras:
+
+		for i in “hola amigos”:
+			print(i)		# muestra todas las letras del string
+
+        ◦ Las listas, tuplas y set son iterables de sus elementos:
+
+		for i in [2,6,10,9]:
+			print(i)
+
+		for i in (“hola”,”adios”,”lunes”):
+			print(i)
+
+		for i in {“uno”,”dos”,”tres”,”cuatro”}
+			print(i)     # el orden no se respeta puesto que estamos en un set
+
+
+	    ▪ Curiosidad: en PY siempre que hacemos algo con bucles, normalmente siempre hay otra forma alternativa
+	      de hacer lo mismo, usando una librería. En este caso, para mostrar los nombres de la lista sin usar bucles podemos escribir esto:
+	      
+	      	lista = ["Carlos","Arturo","Belen","Javier","Ambrosio"]
+		print(*lista, sep='\n')
+
+        ◦ Si queremos recorrer a la vez los objetos junto con sus posiciones, podemos usar enumerate
+            ▪ enumerate nos devuelve un iterable con tuplas (posición, objeto) donde cada objeto de la lista aparece acompañado por su posición
+
+		nombres = ["antonio","jose","luis","ana"]
+		for (pos,nombre) in enumerate(nombres):
+			print(pos,nombre)
+
+        ◦ Si tenemos varias listas (o iterables en general), es posible hacer un recorrido simultáneo de todas ellas usando zip
+            ▪ zip nos devuelve un iterable con tuplas formadas por elementos de las listas recorridas simultáneamente
+
+		lista1=['granada','jaen','madrid']
+		lista2=[958,953,91]
+		for (i,j) in zip(lista1,lista2)
+			print(i,j)	# obtiene ('granada',958), ('jaen',953),('madrid',91)
+
+            ▪ También podemos hacer el producto cartesiano y obtener todas las combinaciones posibles de un elemento de una lista con todos lo elementos de la otra:
+                • Usamos la función product del módulo itertools
+
+			 from itertools import product
+			 lista1=['granada','jaen','madrid']
+			 lista2=[958,953,91]
+			 for (i,j) in product(lista1,lista2):
+			     print(i,j)  # ('granada',958),('granada',953),('granada',91),('jaen',958),('jaen',953),etc
+
+    • Un diccionario es un iterable de sus claves:
+
+		ciudades = {'Granada':958,'Madrid':91,'Jaen':953}
+		for i in ciudades:	
+			print(i)   # Granada, Madrid, Jaen
+
+        ◦ Si queremos recorrer cada clave junto a su valor, el diccionario tiene un método llamado items() que nos permite obtener un iterable con todas las tuplas (clave,valor)
+
+		for (ciudad,prefijo) in ciudades.items():	
+			print(ciudad,prefijo)
+
+		◦ Nota: Los () son opcionales, se los he puesto para que quede claro que se trata de una tupla.
+		  Lo normal será escribirlo así:
+		  
+		for ciudad,prefijo in ciudades.items():	
+			print(ciudad,prefijo)
+		  
+		◦ Otra nota: En los ejemplos anteriores estamos desestructurando la tupla que nos devuelve el método items. En su lugar podemos trabajar directamente con la tupla:
+		
+		for t in ciudades.items():   #Ahora t es una tupla con la forma (clave, valor)
+			print(t[0],t[1])
+		
+        ◦ Si lo que queremos son los valores, el diccionario tiene un método values que nos permite iterar sobre ellos:
+
+		for prefijo in ciudades.values():
+			print(prefijo)
+			
+	Ejemplo: hacemos un diccionario de alumnos-notas y mostramos si un alumno está aprobado o suspenso:
+
+	alumnos = {
+	    "antonio":9,
+	    "jaime":5,
+	    "maría":8,
+	    "luis":4
+	}
+	for nombre in alumnos:
+	    nota = alumnos[nombre]
+	    if nota>=5:
+		print(nombre,"aprobado")
+	    else:
+		print(nombre,"suspenso")
+
+	# repetimos lo mismo pero recorriendo (nombre,nota) a la vez
+	for nombre,nota in alumnos.items():
+	    if nota>=5:
+		print(f"El alumno {nombre} ha aprobado")
+	    else:
+		print(f"El alumno {nombre} está suspenso")
+			
+    • Los archivos también nos proporcionan un iterable con todas las líneas que contienen.
+        ◦ Para abrir un archivo usaremos la función open
+
+		f = open(“prueba.txt”,”r”)	# abrimos el archivo para lectura de datos
+		for linea in f:			# f es un iterable de strings con cada línea del archivo
+			print(f)	
+		f.close()			# no podemos olvidar cerrar el archivo
+
+	◦ También podemos usar un bloque with para que el archivo se cierre automáticamente
+
+		with(open("prueba.txt")) as f:
+		     for linea in f:
+		             print(linea)
+
+        ◦ Por último, si se produce algún error durante la lectura, se lanzará una excepción y 
+          el programa reventará. Podemos capturarla si queremos que nuestro programa responda a
+          dicho error y no se interrumpa:
+
+		try:
+			with(open("prueba.txt")) as f:
+				for linea in f:
+					print(linea)			
+		except IOError as e:	# e es un objeto con información del error
+			print(f"Se ha producido este error: {e}")
+
+

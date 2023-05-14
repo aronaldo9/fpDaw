@@ -1,0 +1,240 @@
+Características:
+----------------
+
+- Python es un lenguaje creado en 1991, de alto nivel y de propósito general (sirve para todo)
+- Ahora mismo es el lenguaje más utilizado
+- Es especialmente adecuado para nuevas tendencias: big data, IA, blockchain, iot,hacking...
+- Se usa mucho para aprender a programar
+- Tiene cientos de miles de librerías en un repositorio unificado de Internet (pip)
+- Está en todos los sitios: data science, aplicaciones web, aplicaciones para móvil...
+- Es un lenguaje interpretado (no hay fase de compilación)
+	* Esto tiene dos inconvenientes:
+		- Todos los errores salen en tiempo de ejecución (no hay fase de detección de errores de escritura) --> esto se soluciona con extensiones en los IDE
+		- Va más lento que los lenguajes compilados
+- En Python un problema se puede resolver de muchas formas distintas
+- Python es DINÁMICAMENTE TIPADO -> los tipos de datos existen, pero son gestionados internamente por Python. 
+	* Por tanto, el programador no pone los tipos de datos de las variables, ya que Python los infiere a partir del contexto (arma de doble filo)
+	* esto funciona muy bien para programas pequeños, pero para programas grandes necesitamos
+	  usar tipos de datos para que el programa sea escalable y tenga
+	  fácil mantenimiento (frase dicha por el creador de Python)
+	* empresas como Dropbox, Google, Microsoft han desarrollado herramientas
+	  para poner tipos a Python.
+	* No hay que poner los tipos en todas las variables, sino solo en lugares estratégicos
+- La programación orientada a objetos tiene menos cosas que en Java
+- Python tiene algunas cosas únicas que no están en otros lenguajes
+- Ahora mismo conviven las versiones Python 3 (la recomendada) y la Python 2 (a extinguir)
+
+La comunidad de Python
+----------------------
+
+- Guido van Rossum es el creador de Python y es el presidente honorífico de Python
+- En Python existe el "Zen de Python", que son unas reglas que adoptan todos los programadores
+  de Python.
+- Hay unas reglas de escritura llamadas PEP 8.
+   * la longitud máxima de las líneas es de 80 caracteres
+   * hay que separar con un espacio las operaciones matemáticas
+   * hay que poner un comentario al principio del programa explicando lo que hace
+   * hay que usar notación snake_case para los nombres de variables, métodos, clases, etc.
+   ....
+- Los programadores fieles a este estilo se llaman Pythonistas
+- Los programadores que desarrollan y amplian Python se llaman Pythoneers
+- El código fuente Python que cumple todas las normas se llama "código Pythonico"
+
+Cómo usamos python
+------------------
+
+- REPL (Read,Eval, Print, Loop) --> es un entorno interactivo donde podemos escribir código
+  Python y ver lo que hace. Con esto no podemos hacer programas y solo sirve para aprender
+- Scripts
+- Programas
+
+Primeros aspectos básicos
+-------------------------
+
+- Python es sensible a mayúsculas/minúsculas (como es habitual en cualquier lenguaje serio)
+- Los comentarios de una línea comienzan por #
+- Los comentarios de múltiples líneas (docstring) se ponen entre """ y """ o ''' y '''
+	* esto es un poco chapuza, ya que lo que hace en realidad es crear un string que no se asigna
+	  a ninguna variable y consume tiempo de ejecución
+- Para hacer un script que muestre Hola en la pantalla simplemente abrimos el bloc de notas
+  y escribimos:
+  
+  print("Hola")		# guardamos el archivo con el nombre programa.py
+
+- Para ejecutarlo, escribimos: 
+	En Windows -> python programa.py
+	En Linux -> python3 programa.py (si ponemos python programa.py, se ejecuta con Python 2)
+
+Tipos de datos de Python
+------------------------
+
+- En Python todo son objetos (no hay tipos básicos)
+
+- Los tipos fundamentales son:
+
+	- int  --> sirve para almacenar cualquier número entero (da igual su longitud)
+	
+		edad = 3
+	
+	- str  --> es un String de cualquier longitud
+			- se puede poner entre comilla doble o comilla simple
+			- si queremos string de varias líneas, usaremos triple comilla
+					
+		nombre = "Antonio"
+		nombre = 'Antonio'
+		nombre = """ Antonio
+				López
+				López """	
+						
+	- float -> un número con decimales cualquiera
+	
+		altura = 17.5
+		temperatura = 3e-8
+	
+	- bool -> es un boolean ( True y False )
+
+		repetidor = True
+		parado = False
+
+	- list -> es una lista mutable. Hay dos formas de hacer listas:
+		* extensión -> damos todos los elementos de la lista entre corchetes
+		
+		pares = [0,2,4,6,8] 
+		
+		* comprensión -> doy una condición que cumplen los elementos de la lista
+		
+		pares = [n for n in range(0,10) if n%2==0]  # esto lo veremos más despacio próximamente
+		
+	- tuple -> es una lista inmutable. Se rellena igual que la lista, pero con paréntesis 
+		* también se puede definir por extensión y por comprensión
+	
+		pares = (0,2,4,6,8) # ejemplo de tupla por extensión
+		
+	- set -> es un conjunto de objetos (son distintos y no hay posiciones).
+		- se rellena igual que las listas pero se usan las llaves { }
+		
+		pares = {0,2,4,6,8}
+		
+	- dict -> es una asociación de parejas (clave,valor)
+
+		prefijos = {'granada':958,
+			    'jaen',953,
+			    'madrid',91}
+
+- Podemos dejar una variable vacía con None
+
+		nombre = None
+
+- En Python podemos cambiar una variable de tipo (esto no se recomienda porque causar errores tontos dificilísimos de detectar)
+
+	a = 3 		# a es un int
+	a = "hola" 	# ahora a es un str
+
+Operaciones
+-----------
+
+- Las mismas que Java: +, -, *, /, %, >, <, >=, <=, i+=, i-=
+
+- Novedades: 
+	     - ** es la potencia
+
+			5 ** 2   # sale 25
+
+	     - Se puede multiplicar un String por un número
+	     	
+	     		"hola"*3  # sale "holaholahola"
+
+ 	     - no existe el ++, ni el --
+	    
+- operaciones con boolean:
+	and --> es la operación Y (el && de java)
+	
+		a = True
+		b = False
+		c = a and b  # c guarda False
+	
+	or --> es la operación O (el || de java)
+	
+		a = True
+		b = False
+		c = a or b  # c guarda True
+		
+	not --> es la operación NO (el ! de java)
+
+		a = True
+		b = not a  # b guarda False
+
+Mostrar datos en pantalla
+-------------------------
+
+- Hay varias formas de mostrar texto con variables en pantalla:
+
+- Una es usar print con varios argumentos
+
+ nombre = "Antonio"
+ edad = 10
+ print('El alumno",nombre,"tiene",edad,"años")  # El alumno Antonio tiene 10 años
+
+ Todas las palabras aparecen separadas por un espacio. 
+ 
+ Podemos configurar el separador así:
+ 
+ print('El alumno",nombre,"tiene",edad,"años",sep='-')  # El-alumno-Antonio-tiene-10-años
+
+- También se puede usar la forma de Java, concatenando string con el signo +
+  * precaución: solo se pueden concatenar str. Si ponemos otro tipo de dato dará error 
+  * esta forma NO se recomienda
+
+  print('El alumno '+nombre+' tiene '+str(edad)+' años')   # str(edad) convierte el int edad en un str
+  
+- Se puede usar el método format del string
+  * esta es la forma de Python 2
+  
+  print('El alumno {} tiene {} años'.format(nombre,edad)) # Los {} se sustituyen por los argumentos pasados a format
+  
+- La forma recomendada en Python 3 es usar un f-String
+
+  print(f'El alumno {nombre} tiene {edad} años')
+
+Leer datos por teclado
+----------------------
+
+- se usa input(texto de entrada)
+
+  nombre = input("dime tu nombre: ")
+
+
+Adecuación al estilo de escritura de Python
+-------------------------------------------
+
+- El programa Pylint evalua si nuestro programa cumple las reglas de escritura de Python
+	* instalación: pip install pylint  (en Linux: pip3 install pylint)
+	* uso: pylint programa.py # Evalua nuestro archivo programa.py
+
+- El programa autopep8 arregla nuestro código fuente para que cumpla las reglas Pep 8
+	* instalación: pip install autopep8
+	* uso: autopep8 programa.py > programa_corregido.py # guarda en programa_corregido.py nuestro programa.py correctamente formateado
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
