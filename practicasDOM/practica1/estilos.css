@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+p { 
+    padding: 10px;
+}
+
+button {
+    padding: 20px;
+    border-radius: 50px;
+    background-color: aquamarine;
+    margin-top: 20px;    
+}
+
+button:hover {
+    background-color: darkred;
+    cursor:pointer;
+    color: aquamarine;
+}
