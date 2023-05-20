@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lobster';    
+    color: #666666;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 50px 150px 200px 250px 40px;
+    grid-template-areas: 
+    "head"
+    "navegador"
+    "articulo2"
+    "derecha"
+    "articulo1"
+    "pie"
+    ;
+}
+
+.head {
+    background-color: bisque;
+    border-radius: 10px;
+    grid-area: head;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.head img {
+    display: none;
+}
+
+.seccion {
+    display: none;
+}
+
+.navegador {
+    background-color: lightgray;
+    border-radius: 10px;
+    grid-area: navegador;
+
+}
+
+ul {    
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+}
+
+li{
+    padding: 10px;
+}
+
+.articulo2 {
+    background-color: blue;
+    border-radius: 10px;
+    grid-area: articulo2;
+    justify-content: center;
+    text-align: center;
+}
+
+.articulo2 h2 {
+    background-color: rgb(213, 218, 222,0.5);
+    border-radius: 50px;
+    width: 200px;
+    padding: 5px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.articulo2 p {
+    text-align: justify;
+    padding: 5px;
+}
+
+.derecha {
+    background-color: rgb(127, 157, 255);
+    border-radius: 10px;
+    grid-area: derecha;
+}
+
+.derecha h2 {
+    text-align: center;
+}
+
+.derecha p {
+    background-color: azure;
+    margin: auto;
+    margin: 10px;
+}
+
+.articulo1 {
+    background-color: blue;
+    border-radius: 10px;
+    grid-area: articulo1;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.articulo1 h2 {
+    justify-content: center;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.articulo1 h3 {
+    background-color: rgb(213, 218, 222,0.5);
+    width: 80px;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.pie {
+    background-color: bisque;
+    border-radius: 10px;
+    grid-area: pie;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+@media screen and (min-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2,fr);
+        grid-template-rows: 10% 30% 50% 10%;
+        grid-template-areas: 
+        "seccion seccion"
+        "derecha derecha"
+        "articulo1 articulo2"
+        "navegador navegador"; 
+    }
+
+    .seccion {
+        background-color: lightgray;
+        border-radius: 10px;
+        grid-area: seccion; 
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .seccion button {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .articulo1 {
+        grid-area: articulo1;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .articulo2 {
+        grid-area: articulo2;
+        width: auto;
+    }
+
+
+    .navegador {
+        background-color: lightgray;
+        border-radius: 10px;
+        grid-area: navegador;    
+    }
+
+    .pie {
+        grid-area: pie;
+        display: none;
+    }
+
+    .head {
+        grid-area: head;
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .container {
+        flex: grid;
+        grid-template-columns: 10% 70% 20%;
+        grid-template-rows: 80px 70px 250px 250px 80px;
+        grid-template-areas:
+        "head head head"
+        "seccion seccion seccion"
+        "navegador articulo1 derecha"
+        "navegador articulo2 derecha"
+        "navegador pie pie"; 
+        gap:10px       
+    }
+
+    .head {
+        grid-area: head;
+        display: flex;
+
+    }
+    .head img {
+        display: flex;
+    }
+
+    .seccion {
+        grid-area: seccion;
+        width: 400px;
+        padding: 10px;
+    }
+
+    .seccion button {
+        padding-left: 10px;
+        align-items: center;
+    }
+
+    .navegador {
+        grid-area: navegador;
+        display: flex;
+    }
+
+    
+    ul {    
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: center;
+    }
+
+    li{
+        padding: 10px;
+    }
+
+    .articulo1 {
+        grid-area: articulo1;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .daw {
+        align-self: center;
+    }
+    .dam {
+        align-self: center;
+    }
+
+    .articulo2 {
+        grid-area: articulo2;
+        padding: 20px;
+    }
+
+    .pie {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+    }
+}
